@@ -1,0 +1,21 @@
+.portfolio {
+  width: 100%;
+  height: 100svh;
+  min-height: 90svh;
+  background: #f3f6fd;
+  margin: 0 auto;
+  border-radius: 3rem;
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.174);
+  padding-top: 2rem;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  @media (max-width: 800px) {
+    margin: 0;
+    width: 100%;
+  }
+
+  // @media (max-width: 800px){
+  //     height: 100svh;
+  // }
+}
