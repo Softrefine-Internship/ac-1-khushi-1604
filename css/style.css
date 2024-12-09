@@ -77,3 +77,247 @@ svg {
     width: 100%;
   }
 }
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 110%;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .content.chat-open .projects {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .content.chat-open .messages {
+    display: block;
+    width: 100%;
+  }
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  height: 80.5%;
+  width: 100%;
+  padding-bottom: 5rem;
+  flex-wrap: wrap;
+  gap: 5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-content: baseline;
+}
+.projects-container::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .projects-container {
+    padding-block: 3rem;
+    padding-bottom: 8rem;
+    height: 91svh;
+    gap: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .projects-container {
+    padding-bottom: 15rem;
+  }
+}
+
+.searchbar-secendory {
+  height: 100%;
+  position: relative;
+  margin-top: 1rem;
+  display: none;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .searchbar-secendory {
+    display: block;
+  }
+}
+.searchbar-secendory label {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  left: 13%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.searchbar-secendory input {
+  height: 100%;
+  border: none;
+  width: 80%;
+  border-radius: 100px;
+  padding: 2rem;
+  padding-left: 6rem;
+  font-size: 1.8rem;
+  outline: none;
+}
+.searchbar-secendory input:focus {
+  outline: 1px solid black;
+}
+.searchbar-secendory input::placeholder {
+  font-size: 18px;
+  color: #999;
+}
+@media (max-width: 600px) {
+  .searchbar-secendory input::placeholder {
+    font-size: 14px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  justify-content: space-between;
+  height: 3.6rem;
+  padding: 0 3.5rem;
+}
+.header__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  height: 100%;
+}
+@media (max-width: 800px) {
+  .header__left {
+    gap: 6rem;
+  }
+}
+.header__left--hamburger {
+  height: 70%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.header__left--hamburger svg {
+  height: 100%;
+  width: 100%;
+}
+.header__left--logo {
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.header__left--searchbar {
+  height: 100%;
+  position: relative;
+  margin-left: -35px;
+}
+@media (max-width: 600px) {
+  .header__left--searchbar {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .header__left--searchbar {
+    margin-left: 0;
+  }
+}
+@media (max-width: 370px) {
+  .header__left--searchbar {
+    margin-left: -20px;
+  }
+}
+.header__left--searchbar label {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  left: 3%;
+  top: 55%;
+  transform: translateY(-50%);
+}
+.header__left--searchbar input {
+  height: 100%;
+  border: none;
+  width: 25vw;
+  border-radius: 100px;
+  padding: 2rem;
+  padding-left: 4rem;
+  font-size: 1.8rem;
+  outline: 1px solid black;
+}
+@media (max-width: 800px) {
+  .header__left--searchbar input {
+    width: 30vw;
+  }
+}
+.header__left--searchbar input:focus {
+  outline: 1px solid black;
+}
+.header__left--searchbar input::placeholder {
+  font-size: 18px;
+  color: #999;
+}
+@media (max-width: 600px) {
+  .header__left--searchbar input::placeholder {
+    font-size: 14px;
+  }
+}
+.header__right {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.header__right > * {
+  display: flex;
+}
+.header__right--line {
+  width: 1px;
+  height: 100%;
+  background: rgba(88, 88, 88, 0.51);
+}
+.header__right--plusIcon svg {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.header__right--plusIcon:hover svg {
+  transform: scale(1.2);
+}
+.header__right--notification {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.6s;
+}
+.header__right--notification::before {
+  height: 1rem;
+  width: 1rem;
+  background: red;
+  border-radius: 50%;
+  right: 2px;
+}
+.header__right--notification:hover {
+  transform-origin: top;
+  animation: ring 0.6s ease-out 0.2s 3 alternate;
+}
+.header__right--image {
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header__right--user {
+  font-size: 2rem;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .header__right--user {
+    display: none;
+  }
+}
+.header__right svg {
+  height: 3rem;
+  width: 3rem;
+}
