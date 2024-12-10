@@ -1,0 +1,112 @@
+.projects {
+  width: 65%;
+  height: 85%;
+  background: darken($color3, 1%);
+  border-radius: 3rem 3rem 0 0;
+  padding-inline: 5rem;
+
+  @media (max-width: 1000px) {
+    width: 55%;
+    height: 105%;
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    padding-inline: 3rem;
+  }
+  // @media (max-width: 400px){
+  //     padding-inline: 1rem;
+  // }
+
+  &__heading {
+    @include flex-center();
+    justify-content: space-between;
+    padding-block: 2rem;
+    @media (max-width: 1000px) {
+      padding-block: 2rem;
+    }
+
+    &--h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    &--date {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
+
+  &__statistics {
+    @include flex(5rem);
+    padding-bottom: 2rem;
+    // align-items: center;
+    @media (max-width: 1005px) {
+      gap: 1rem;
+    }
+    @media (max-width: 800px) {
+      gap: 5rem;
+    }
+    @media (max-width: 460px) {
+      gap: 2rem;
+    }
+    @media (max-width: 370px) {
+      gap: 0.5rem;
+    }
+
+    &-item {
+      &:nth-child(4) {
+        .projects__statistics-item--detail::before {
+          display: none;
+        }
+      }
+      &--number {
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+
+      &--detail {
+        font-size: 1.2rem;
+        position: relative;
+        &::before {
+          height: 0.5rem;
+          aspect-ratio: 1/1;
+          border: 0.2rem solid black;
+          border-radius: 50%;
+          bottom: 0px;
+          right: -50%;
+          @media (max-width: 1000px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-nav {
+      display: flex;
+      gap: 1rem;
+      margin-left: auto;
+      align-items: flex-start !important;
+      &--hamburger {
+        margin-left: auto;
+        scale: 1.1;
+      }
+      align-items: center;
+
+      &--more {
+        margin-left: auto;
+        height: 1.7rem;
+        width: 1.7rem;
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+        &-child {
+          // flex-shrink: 0;
+          height: 0.7rem;
+          width: 0.7rem;
+          border: 0.3rem solid black;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
