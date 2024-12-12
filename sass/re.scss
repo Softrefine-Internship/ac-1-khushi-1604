@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  content: "";
+  position: absolute;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 62.5%;
+
+  @media (max-width: 1200px) {
+    font-size: 9px;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 7px;
+  }
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  background: $color7 !important;
+}
+
+img,
+svg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
