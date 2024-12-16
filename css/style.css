@@ -756,3 +756,118 @@ svg {
 .project-card__footer--button-btn:hover {
   color: #00a6cc;
 }
+.messages {
+  height: 100%;
+  width: 35%;
+}
+@media (max-width: 1000px) {
+  .messages {
+    width: 45%;
+  }
+}
+@media (max-width: 800px) {
+  .messages {
+    display: none;
+  }
+}
+.messages__header {
+  display: flex;
+  gap: 0px;
+  align-items: end;
+  padding: 1.5rem 2rem;
+  height: 6.5rem;
+  border-bottom: 1px solid #939393;
+}
+.messages__header h4 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.messages__header--icon {
+  margin-left: auto;
+  height: 2.3rem;
+  width: 2.3rem;
+}
+.messages__header--options {
+  right: 2rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.messages__header--options-dot {
+  height: 0.7rem;
+  aspect-ratio: 1/1;
+  background: black;
+  border-radius: 50%;
+  margin-bottom: 0.3rem;
+}
+.messages__container {
+  width: 100%;
+  height: 75%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-bottom-right-radius: 30px;
+}
+.messages__container::-webkit-scrollbar {
+  display: none;
+}
+.messages__container--item {
+  display: flex;
+  align-items: center;
+  height: 12rem;
+  padding-inline: 2rem;
+  gap: 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-bottom: 1px solid #939393;
+}
+.messages__container--item:hover {
+  background: white;
+  border-radius: 10px;
+  transform: translate(3px, 3px);
+  box-shadow: 2rem 3rem 8rem #0000002b;
+  border: none;
+}
+.messages__container--item:hover
+  .messages__container--item--content--header-icon
+  svg {
+  fill: black;
+}
+@media (max-width: 800px) {
+  .messages__container--item {
+    padding-inline: 1rem;
+  }
+}
+.messages__container--item-profile {
+  width: 15%;
+}
+.messages__container--item-profile-image {
+  height: 5rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.messages__container--item--content {
+  width: 85%;
+}
+.messages__container--item--content--header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.messages__container--item--content--header-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.messages__container--item--content--header-icon {
+  height: 2rem;
+  width: 2rem;
+}
+.messages__container--item--content--text {
+  font-size: 1.3rem;
+}
+.messages__container--item--content--date {
+  font-size: 1.3rem;
+  text-align: end;
+}
